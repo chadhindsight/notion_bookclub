@@ -1,0 +1,10 @@
+{
+  "name": "notion_bookclub",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bookClub.js",
+  "dependencies": {
+    "@notionhq/client": "^1.0.1"
+  }
+}
