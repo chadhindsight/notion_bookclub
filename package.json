@@ -5,6 +5,8 @@
   "description": "",
   "main": "bookClub.js",
   "dependencies": {
-    "@notionhq/client": "^1.0.1"
+    "@notionhq/client": "^1.0.1",
+    "csv-parse": "^5.0.4",
+    "dotenv": "^16.0.0"
   }
 }
