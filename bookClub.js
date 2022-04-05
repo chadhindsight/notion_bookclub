@@ -7,13 +7,12 @@ dotenv.config()
 const inputFile = './ratings.csv';
 
 
-// Initializing a client.
+// Initializing a client
 const notion = new Client({
     auth: process.env.NOTION_TOKEN,
 })
 const databaseId = process.env.NOTION_ID
 
-// Firstly, put all entries in an array
 const csvData = [];
 
 let bookHash = {}
