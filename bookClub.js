@@ -14,18 +14,18 @@ const notion = new Client({
 const databaseId = process.env.NOTION_ID
 
 // Firstly, put all entries in an array
-const csvData = [];
+const dataFromCsv = [];
 
 let bookHash = {}
 
 createReadStream(inputFile)
     .pipe(parse())
     .on('data', function (csvrow) {
-        //put current csv row in the csvData array.
-        csvData.push(csvrow);
+        //put current csv row in the csvData array
+        dataFromCsv.push(csvrow);
     })
     .on('end', function () {
-        csvData.forEach((item) => {
+        dataFromCsv.forEach((item) => {
             const tempWord = item[0].trim().toLowerCase().split(" ")
 
             for (let i = 0; i < tempWord.length; i++) {
