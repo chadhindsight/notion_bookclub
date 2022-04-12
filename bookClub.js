@@ -16,7 +16,7 @@ const databaseId = process.env.NOTION_ID
 // Firstly, put all entries in an array
 const dataFromCsv = [];
 
-let bookHashData = {}
+let bookHash = {}
 
 createReadStream(inputFile)
     .pipe(parse())
@@ -37,11 +37,11 @@ createReadStream(inputFile)
             const rating = itemEntry[2]
 
             // If the same reviewer rated a book, keep the most recent occurence
-            if (!bookHashData[sanitizedTitle]) bookHashData[sanitizedTitle] = {}
-            bookHashData[sanitizedTitle][sanitizedReviewer] = rating
+            if (!bookHash[sanitizedTitle]) bookHash[sanitizedTitle] = {}
+            bookHash[sanitizedTitle][sanitizedReviewer] = rating
         })
 
-        const bookList = Object.entries(bookHashData).map((book => {
+        const bookList = Object.entries(bookHash).map((book => {
             // a var that keeps track of the number of five star reviews for a book
             let faves = 0
 
