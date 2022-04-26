@@ -36,7 +36,7 @@ createReadStream(inputFile)
             const sanitizedReviewer = itemEntry[1].trim()
             const rating = itemEntry[2]
 
-            // If the same reviewer rated a book, keep the most recent occurence.
+            // If the same reviewer rated a book, keep the most recent occurence
             if (!bookHashData[sanitizedTitle]) bookHashData[sanitizedTitle] = {}
             bookHashData[sanitizedTitle][sanitizedReviewer] = rating
         })
