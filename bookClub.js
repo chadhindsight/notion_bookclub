@@ -21,7 +21,7 @@ let bookHashData = {}
 createReadStream(inputFile)
     .pipe(parse())
     .on('data', function (csvrow) {
-        // put current csv row in the csvData array
+        // put current csv row in the csvData array.
         dataFromCSV.push(csvrow);
     })
     .on('end', function () {
