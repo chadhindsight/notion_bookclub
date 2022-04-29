@@ -11,7 +11,7 @@ const inputFile = './ratings.csv';
 const notion = new Client({
     auth: process.env.NOTION_TOKEN,
 })
-const databaseId = process.env.NOTION_ID
+const idforDB = process.env.NOTION_ID
 
 //put all initial entries in an array
 const dataFromCSV = [];
@@ -64,7 +64,7 @@ createReadStream(inputFile)
         async function addItem(entry) {
             try {
                 const response = await notion.pages.create({
-                    parent: { database_id: databaseId },
+                    parent: { database_id: idforDB },
                     properties: {
                         'Book Title': {
                             'title': [
