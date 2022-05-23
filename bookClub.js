@@ -32,8 +32,8 @@ createReadStream(inputFile)
                 tempWord[i] = tempWord[i][0].toUpperCase() + tempWord[i].substr(1);
             }
             // Clean up the format of both the title & reviewer strings
-            const sanitizedReviewer = itemEntry[1].trim()
             const sanitizedTitle = tempWord.join(' ')
+            const sanitizedReviewer = itemEntry[1].trim()
             const rating = itemEntry[2]
 
             // If the same reviewer rated a book, keep the most recent occurence
