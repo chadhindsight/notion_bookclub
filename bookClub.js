@@ -45,7 +45,7 @@ createReadStream(inputFile)
             // a var that keeps track of the number of five star reviews for a book
             let faves = 0
 
-            const title = book[0]
+            const bookTitle = book[0]
             const temp = Object.values(book[1])
             // convert book ratings from string to number values
             const convertedVals = temp.map(value => {
@@ -58,7 +58,7 @@ createReadStream(inputFile)
 
             const bookRatingAverage = convertedVals.reduce((valA, valB) => Math.round(valA + valB / temp.length))
 
-            return [title, Number(bookRatingAverage.toFixed(1)), faves]
+            return [bookTitle, Number(bookRatingAverage.toFixed(1)), faves]
         }));
 
         async function addItem(entry) {
