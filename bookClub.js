@@ -47,7 +47,7 @@ createReadStream(inputFile)
 
             const title = book[0]
             const temp = Object.values(book[1])
-            // convert ratings from string to number values
+            // convert book ratings from string to number values
             const convertedVals = temp.map(value => {
 
                 const n = Number(value)
