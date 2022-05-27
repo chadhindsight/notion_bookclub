@@ -26,14 +26,14 @@ createReadStream(inputFile)
     })
     .on('end', function () {
         dataFromOriginalCSV.forEach((itemEntry) => {
-            const tempWord = itemEntry[0].trim().toLowerCase().split(" ")
+            const temporaryWord = itemEntry[0].trim().toLowerCase().split(" ")
 
-            for (let i = 0; i < tempWord.length; i++) {
-                tempWord[i] = tempWord[i][0].toUpperCase() + tempWord[i].substr(1);
+            for (let i = 0; i < temporaryWord.length; i++) {
+                temporaryWord[i] = temporaryWord[i][0].toUpperCase() + temporaryWord[i].substr(1);
             }
             // Clean up the format of both the title & reviewer strings
             const sanitizedReviewer = itemEntry[1].trim()
-            const sanitizedTitle = tempWord.join(' ')
+            const sanitizedTitle = temporaryWord.join(' ')
             const rating = itemEntry[2]
 
             // If the same reviewer rated a book, keep the most recent occurence
