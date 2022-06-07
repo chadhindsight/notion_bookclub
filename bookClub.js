@@ -7,7 +7,7 @@ dotenv.config()
 const inputFile = './ratings.csv';
 
 
-// Initializing a client.
+// Initializing a client. rasta is passing through
 const notion = new Client({
     auth: process.env.NOTION_TOKEN,
 })
