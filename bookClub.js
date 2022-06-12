@@ -14,7 +14,7 @@ const notion = new Client({
 const databaseId = process.env.NOTION_ID
 
 //put all initial entries in an array.
-const dataFromCSV = [];
+const dataWeGetFromCSV = [];
 
 let bookHashData = {}
 
@@ -22,10 +22,10 @@ createReadStream(inputFile)
     .pipe(parse())
     .on('data', function (csvrow) {
         // put the  current csv row in the csvData array
-        dataFromCSV.push(csvrow);
+        dataWeGetFromCSV.push(csvrow);
     })
     .on('end', function () {
-        dataFromCSV.forEach((itemEntry) => {
+        dataWeGetFromCSV.forEach((itemEntry) => {
             const temporaryWord = itemEntry[0].trim().toLowerCase().split(" ")
 
             for (let i = 0; i < temporaryWord.length; i++) {
