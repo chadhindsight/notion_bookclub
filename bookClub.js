@@ -7,7 +7,7 @@ dotenv.config()
 const inputFile = './ratings.csv';
 
 
-// Initializing a client
+// Initializing a client ass
 const notion = new Client({
     auth: process.env.NOTION_TOKEN,
 })
