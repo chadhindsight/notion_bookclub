@@ -13,7 +13,7 @@ const notion = new Client({
 })
 const databaseId = process.env.NOTION_ID
 
-//put all initial entries into this array array
+//put all initial entries into this array array ass
 const dataFromCSV = [];
 
 let dataForBookHash = {}
