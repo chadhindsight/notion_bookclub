@@ -35,7 +35,7 @@ createReadStream(inputFile)
             const sanitizedReviewer = itemEntry[1].trim()
             const sanitizedTitle = temporaryWord.join(' ')
             const rating = itemEntry[2]
-            // stop closing
+
             // If the same reviewer rated a book, keep that most recent occurence
             if (!bookHashData[sanitizedTitle]) bookHashData[sanitizedTitle] = {}
             bookHashData[sanitizedTitle][sanitizedReviewer] = rating
