@@ -45,7 +45,7 @@ createReadStream(inputFile)
             // a var that keeps track of the number of five star reviews for a book
             let faves = 0
 
-            const title = book[0]
+            const title = book[0]d
             const temp = Object.values(book[1])
             // convert book ratings from string to number values
             const convertedVals = temp.map(value => {
