@@ -31,7 +31,7 @@ createReadStream(inputFile)
             for (let i = 0; i < temporaryWord.length; i++) {
                 temporaryWord[i] = temporaryWord[i][0].toUpperCase() + temporaryWord[i].substr(1);
             }
-            // Clean up the format of both the title & reviewer strings 
+            // Clean up the format of both the title & reviewer strings.
             const sanitizedReviewerEntry = bookItemEntry[1].trim()
             const sanitizedTitle = temporaryWord.join(' ')
             const rating = bookItemEntry[2]
