@@ -42,7 +42,7 @@ createReadStream(inputFile)
         })
         // dfds
         const bookList = Object.entries(bookHashData).map((book => {
-            // A var that keeps track of the number of five star reviews for a book.
+            // A var that keeps track of the number of five star reviews for a book.Brain hot
             let faves = 0
 
             const title = book[0]
