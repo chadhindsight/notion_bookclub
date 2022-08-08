@@ -31,12 +31,12 @@ createReadStream(inputFile)
             for (let i = 0; i < temporaryWord.length; i++) {
                 temporaryWord[i] = temporaryWord[i][0].toUpperCase() + temporaryWord[i].substr(1);
             }
-            // Clean up the both the title & reviewer strings formatting
+            // Clean up the format of both the title & reviewer strings
             const sanitizedReviewerEntry = bookItemEntry[1].trim()
             const sanitizedTitle = temporaryWord.join(' ')
             const rating = bookItemEntry[2]
 
-            // If the same reviewer rated a book, keep that most recent occurence
+            // If the same reviewer rated a book, keep that most recent occurence 
             if (!bookHashData[sanitizedTitle]) bookHashData[sanitizedTitle] = {}
             bookHashData[sanitizedTitle][sanitizedReviewerEntry] = rating
         })
