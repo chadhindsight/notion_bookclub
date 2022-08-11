@@ -11,6 +11,7 @@ const inputFile = './ratings.csv';
 const notion = new Client({
     auth: process.env.NOTION_TOKEN,
 })
+
 const databaseId = process.env.NOTION_ID
 
 //put all initial entries into this array array
@@ -21,7 +22,7 @@ let bookHashData = {}
 createReadStream(inputFile)
     .pipe(parse())
     .on('data', function (csvrow) {
-        // put the  current csv row into the array.
+        // put the  current csv row into the array
         dataFromCSV.push(csvrow);
     })
     .on('end', function () {
@@ -40,6 +41,7 @@ createReadStream(inputFile)
             if (!bookHashData[sanitizedTitle]) bookHashData[sanitizedTitle] = {}
             bookHashData[sanitizedTitle][sanitizedReviewerEntry] = rating
         })
+
         const bookList = Object.entries(bookHashData).map((book => {
             // A var that keeps track of the number of five star reviews for a book
             let faves = 0
