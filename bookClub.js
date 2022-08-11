@@ -40,7 +40,6 @@ createReadStream(inputFile)
             if (!bookHashData[sanitizedTitle]) bookHashData[sanitizedTitle] = {}
             bookHashData[sanitizedTitle][sanitizedReviewerEntry] = rating
         })
-        // dfds
         const bookList = Object.entries(bookHashData).map((book => {
             // A var that keeps track of the number of five star reviews for a book
             let faves = 0
