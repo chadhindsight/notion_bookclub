@@ -97,6 +97,6 @@ createReadStream(inputFile)
 // function countingSort(arr) {
 //     // Write your code here
 //     let updatedArray = Array(100).fill(0)
-//     arr.forEach(el => el < 100 ? updatedArray[el] += 1 : null)
+//     arr.forEach(element => element < 100 ? updatedArray[element] += 1 : null)
 //     return updatedArray
 // }
