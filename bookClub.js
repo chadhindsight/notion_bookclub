@@ -93,7 +93,7 @@ createReadStream(inputFile)
         }
         bookList.forEach(item => addItem(item))
     });
-// Counting Sort.
+// Counting Sort
 // function countingSort(arr) {
 //     // Write your code here
 //     let updatedArray = Array(100).fill(0)
