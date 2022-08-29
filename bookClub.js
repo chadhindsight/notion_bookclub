@@ -63,7 +63,7 @@ createReadStream(inputFile)
             return [title, Number(bookRatingAverage.toFixed(1)), faves]
         }));
 
-        async function addItem(entry) {
+        async function addNewItem(entry) {
             try {
                 const response = await notion.pages.create({
                     parent: { database_id: databaseId },
@@ -91,7 +91,7 @@ createReadStream(inputFile)
                 console.log(error)
             }
         }
-        bookList.forEach(item => addItem(item))
+        bookList.forEach(item => addNewItem(item))
     });
 // Counting Sort
 // function countingSort(arr) {
