@@ -95,7 +95,7 @@ createReadStream(inputFile)
     });
 // Counting Sort
 // function countingSort(arr) {
-//     // Write your code here
+//  
 //     let updatedArray = Array(100).fill(0)
 //     arr.forEach(element => element < 100 ? updatedArray[element] += 1 : null)
 //     return updatedArray
