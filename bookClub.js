@@ -14,7 +14,7 @@ const notion = new Client({
 
 const databaseId = process.env.NOTION_ID
 
-// Put all initial entries into this new array. germs
+// Put all initial entries into this new array
 const dataFromCSV = [];
 
 let bookHashData = {}
