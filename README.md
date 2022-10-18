@@ -12,7 +12,7 @@ Firstly, we import the csv file and convert it using a third party npm package c
 
 In order to run this program do the following:
 
-1. Import the csv file into the file where it will be use and then `npm i` from the terminal to install required packages(The primary dependencies are the notionhq/client & csv-parse)
+1. Import the desired csv file into the file where it will be use and then `npm i` from the terminal to install required packages(The primary dependencies are the notionhq/client & csv-parse)
 
 2. After installing the packages, ensure your sensitive tokens are stored in a ['.env file'](https://www.npmjs.com/package/dotenv) so they won't be directly exposed publicly
 
